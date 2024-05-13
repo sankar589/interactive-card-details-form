@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
   min-height: 100vh;
+  font-family: "Space Grotesk",sans-serif;
+  font-weight: 400;
+}
+.cards{
+  background-image: url('../interactive-card-details-form-main/images/bg-main-mobile.png');
+  width: 100%;
+  height: 35vh;
+}
+.card-back{
+  background-image: url('../interactive-card-details-form-main/images/bg-card-back.png');
+  width: 60vh;
+  height: 40vh;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 75px 32px;
+}
+
+.card-front{
+  background-image: url('../interactive-card-details-form-main/images/bg-card-front.png');
+  width: 60vh;
+  height: 40vh;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  margin-top : -22vh;
+  margin-left : 20px;
+}
+.card-logo{
+  background-image: url('../interactive-card-details-form-main/images/card-logo.svg');
+  width: 60vh;
+  height: 40vh;
+  background-size: 12%;
+  background-repeat: no-repeat;
+  margin-top : -37vh;
+  margin-left : 38px;
+}
+
+.card-details{
+  display: grid;
+  width: 65%;
+  grid-template-areas: "no no"
+                       "name date";
+  margin-top : -30vh;
+  margin-left : 38px;
+  color: white;
+  gap: 15px;
+  
+}
+
+.acc-no{
+  grid-area: no;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+.acc-name{
+  grid-area: name;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.acc-date{
+  grid-area: date;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.form-section{
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 4vh;
+  color: hsl(278, 68%, 11%);
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.c-name > input , .c-no > input{
+  border: initial;
+  font-family: "Space Grotesk",sans-serif;
+  padding: 1.5vh;
+  width: calc(100% - 3vh);
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 1vh;
+}
+
+.c-text{
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+}
+
+.date-cvc{
+  display: grid;
+  grid-template-areas: "e-t e-t c-t c-t"
+                       "mi yi ci ci";
+}
+
+.date-header{
+  grid-area: e-t;
+}
+
+.cvc-header{
+  grid-area: c-t;
+}
+
+.month-slot{
+  grid-area: mi;
+  padding: 1.5vh;
+  width: calc(80% - 3vh);
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 1vh;
+}
+
+.year-slot{
+  grid-area: yi;
+  padding: 1.5vh;
+  width: calc(80% - 3vh);
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 1vh;
+}
+
+.cvc-slot{
+  grid-area: ci;
+  border: 1px solid hsl(270, 3%, 87%);
+  padding: 1.5vh;
+  width: calc(100% - 3vh);
+  border-radius: 1vh;
+} 
+
+.confirm-btn{
+  all: initial;
+  font-family: "Space Grotesk",sans-serif;
+  margin-top: 3vh;
+  background-color: hsl(278, 68%, 11%);
+  padding: 1.5vh;
+  width: calc(100% - 3vh);
+  text-align: center;
+  color: white;
+  border-radius: 1vh;
+}
+
+.Thank-you-section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  row-gap: 2vh;
+  padding: 15vh 4vh;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.tq-icon{
+  background-image: url('../interactive-card-details-form-main/images/icon-complete.svg');
+  width : 13vh;
+  height: 13vh;
+  background-repeat: no-repeat;
+}
+
+.tq-msg{
+  font-size: 30px;
+  color: hsl(278, 68%, 11%);
+}
+
+.msg{
+  color: hsl(279, 6%, 55%);
+}
+
+.continue-btn{
+  all: initial;
+  font-family: "Space Grotesk",sans-serif;
+  margin-top: 3vh;
+  background-color: hsl(278, 68%, 11%);
+  padding: 2vh;
+  width: calc(100% - 4vh);
+  text-align: center;
   color: white;
+  border-radius: 1vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
